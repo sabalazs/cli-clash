@@ -3,6 +3,8 @@ import Mage from "./hero-types/Mage.js";
 import Priest from "./hero-types/Priest.js";
 import Rouge from "./hero-types/Rouge.js";
 import Warrior from "./hero-types/Warrior.js";
+import Sword from "./weapons/Sword.js";
+import WarHammer from "./weapons/WarHammer.js";
 
 const warrior = new Warrior("Mars");
 console.log(warrior);
@@ -23,3 +25,7 @@ rouge.useAbility();
 const archer = new Archer("Saturn");
 console.log(archer);
 archer.useAbility();
+
+const warhammer = new WarHammer(warrior);
+console.log(warhammer);
+console.log(warhammer.canOwnerUseIt());
