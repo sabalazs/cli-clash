@@ -6,10 +6,9 @@ import Sword from "./weapons/Sword.js";
 
 const warrior = new Warrior("Mars");
 warrior.equipWeapon(new BattleAxe());
-console.log(warrior);
+
 const mage = new Mage("Jupiter");
 mage.equipWeapon(new Sword());
-console.log(mage);
 
 const arena = new Arena(warrior, mage);
 
