@@ -2,13 +2,14 @@ const armour = (hero) => {
   hero.currentArmour += 10;
 };
 const heal = (hero) => {
+  //TODO Priest can go above starting HP
   hero.hp += 10;
 };
 const firestorm = (hero) => {
   hero.currentDamage += 20;
 };
 const dodge = (hero) => {
-  hero.currentEvasion += 100;
+  hero.currentEvasion += 1;
 };
 const headshot = (hero) => {
   hero.currentDamage += 15;

@@ -5,7 +5,7 @@ export default class Rouge extends Hero {
     super(name);
     this.hp = 80;
     this.armour = 3;
-    this.evasion = 30;
+    this.evasion = 0.30;
     this.abilities.push("dodge");
     this.defaultAbility = "dodge";
     this.resetCurrent();

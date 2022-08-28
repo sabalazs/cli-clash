@@ -5,7 +5,7 @@ export default class Archer extends Hero {
     super(name);
     this.hp = 80;
     this.armour = 2;
-    this.evasion = 15;
+    this.evasion = 0.15;
     this.abilities.push("headshot");
     this.defaultAbility = "headshot";
     this.resetCurrent();
