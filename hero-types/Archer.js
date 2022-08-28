@@ -8,5 +8,6 @@ export default class Archer extends Hero {
     this.evasion = 15;
     this.abilities.push("headshot");
     this.defaultAbility = "headshot";
+    this.resetCurrent();
   }
 }

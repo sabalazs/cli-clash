@@ -1,17 +1,17 @@
-const armour = () => {
-  console.log("using armuor");
+const armour = (hero) => {
+  hero.currentArmour += 10;
 };
-const heal = () => {
-  console.log("using heal");
+const heal = (hero) => {
+  hero.hp += 10;
 };
-const firestorm = () => {
-  console.log("using firestorm");
+const firestorm = (hero) => {
+  hero.currentDamage += 20;
 };
-const dodge = () => {
-  console.log("using dodge");
+const dodge = (hero) => {
+  hero.currentEvasion += 100;
 };
-const headshot = () => {
-  console.log("using headshot");
+const headshot = (hero) => {
+  hero.currentDamage += 15;
 };
 
 const abilitiesMap = {

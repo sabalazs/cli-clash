@@ -8,5 +8,6 @@ export default class Mage extends Hero {
     this.evasion = 5;
     this.abilities.push("firestorm");
     this.defaultAbility = "firestorm";
+    this.resetCurrent();
   }
 }

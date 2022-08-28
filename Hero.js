@@ -7,6 +7,9 @@ export default class Hero {
   defaultAbility;
   armour;
   evasion;
+  currentArmour = 0;
+  currentEvasion = 0;
+  currentDamage = 0;
 
   constructor(name) {
     if (!name) throw new Error("Missing parameter: name");
@@ -20,11 +23,16 @@ export default class Hero {
 
     if (canUseAbility) {
       const ability = abilitiesMap[abilityName];
-      ability();
+      ability(this);
     } else {
       throw new Error(
         `${this.name} can't use the ${abilityName} ability. Available abilities are: ${this.abilities}`
       );
     }
+  };
+
+  resetCurrent = () => {
+    this.currentArmour = this.armour;
+    this.currentEvasion = this.evasion;
   };
 }

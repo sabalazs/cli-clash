@@ -8,5 +8,6 @@ export default class Priest extends Hero {
     this.evasion = 20;
     this.abilities.push("heal");
     this.defaultAbility = "heal";
+    this.resetCurrent();
   }
 }

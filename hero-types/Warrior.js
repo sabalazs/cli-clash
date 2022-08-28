@@ -8,5 +8,6 @@ export default class Warrior extends Hero {
     this.evasion = 20;
     this.abilities.push("armour");
     this.defaultAbility = "armour";
+    this.resetCurrent();
   }
 }

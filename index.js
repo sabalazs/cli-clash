@@ -9,8 +9,9 @@ import WarHammer from "./weapons/WarHammer.js";
 const warrior = new Warrior("Mars");
 console.log(warrior);
 warrior.useAbility();
+console.log(warrior);
 
-const priest = new Priest("Jupiter");
+/* const priest = new Priest("Jupiter");
 console.log(priest);
 priest.useAbility();
 
@@ -28,4 +29,4 @@ archer.useAbility();
 
 const warhammer = new WarHammer(warrior);
 console.log(warhammer);
-console.log(warhammer.canOwnerUseIt());
+console.log(warhammer.canOwnerUseIt()); */
