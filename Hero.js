@@ -42,5 +42,6 @@ export default class Hero {
   resetCurrent = () => {
     this.currentArmour = this.armour;
     this.currentEvasion = this.evasion;
+    this.currentDamage = 0;
   };
 }
