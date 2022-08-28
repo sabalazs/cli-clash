@@ -1,0 +1,22 @@
+{
+  "name": "cli-clash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabalazs/cli-clash.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabalazs/cli-clash/issues"
+  },
+  "homepage": "https://github.com/sabalazs/cli-clash#readme",
+  "type": "module"
+}
