@@ -9,9 +9,25 @@ export default class Arena {
   }
 
   fight = () => {
-    //TODO: stop infinite fights
-    while (!this.winner) this.fightOneRound();
-    console.log(`The fight is over! The winner is: ${this.winner.name}`);
+    console.log(
+      `\x1b[32mStarting a new fight! ${this.hero1.name} has ${
+        this.hero1.hp
+      } HP${
+        this.hero1.weapon ? `, and a(n) ${this.hero1.weapon.name}` : ""
+      }, while ${this.hero2.name} has ${this.hero2.hp} HP${
+        this.hero2.weapon ? `, and a(n) ${this.hero2.weapon.name}` : ""
+      }.\x1b[0m`
+    );
+    while (!this.winner && this.roundCount < 100) this.fightOneRound();
+    if (this.roundCount >= 100) {
+      console.log(
+        `The fight is over! \x1b[32mThe jury got bored, it's a draw.`
+      );
+    } else {
+      console.log(
+        `The fight is over! \x1b[32mThe winner is: ${this.winner.name}`
+      );
+    }
   };
 
   fightOneRound = () => {
@@ -19,13 +35,7 @@ export default class Arena {
     this.hero1.resetCurrent();
     this.hero2.resetCurrent();
     console.log(
-      `Starting round ${this.roundCount}. ${this.hero1.name} has ${
-        this.hero1.hp
-      } HP${
-        this.hero1.weapon ? `, and a(n) ${this.hero1.weapon.name}` : ""
-      }, while ${this.hero2.name} has ${this.hero2.hp} HP${
-        this.hero2.weapon ? `, and a(n) ${this.hero2.weapon.name}` : ""
-      }.`
+      `\x1b[32mStarting round ${this.roundCount}. ${this.hero1.name} has ${this.hero1.hp} HP, while ${this.hero2.name} has ${this.hero2.hp} HP.\x1b[0m`
     );
 
     //activate abilities
@@ -40,8 +50,8 @@ export default class Arena {
       this.strike(this.hero1, this.hero2);
       this.strike(this.hero2, this.hero1);
     } else {
-      this.strike(this.hero1, this.hero2);
       this.strike(this.hero2, this.hero1);
+      this.strike(this.hero1, this.hero2);
     }
   };
 
