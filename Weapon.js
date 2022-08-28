@@ -1,11 +1,8 @@
 export default class Weapon {
+  owner;
   minDamage;
   maxDamage;
   accuracy;
+  name;
   canOwnerUseIt = () => {};
-
-  constructor(owner) {
-    if (!owner) throw new Error("Sorry, weapons must have an owner.");
-    this.owner = owner;
-  }
 }
