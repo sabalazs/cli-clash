@@ -1,13 +1,7 @@
 import Hero from "../Hero.js";
-
 export default class Rouge extends Hero {
-  constructor(name) {
-    super(name);
-    this.hp = 80;
-    this.armour = 3;
-    this.evasion = 0.30;
-    this.abilities.push("dodge");
-    this.defaultAbility = "dodge";
-    this.resetCurrent();
-  }
+    constructor(name) {
+        super(name, 80, ["dodge"], "dodge", 3, 0.3);
+        this.resetCurrent();
+    }
 }

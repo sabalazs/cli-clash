@@ -1,15 +1,9 @@
 import Rouge from "../hero-types/Rouge.js";
 import Weapon from "../Weapon.js";
-
 export default class Dagger extends Weapon {
-  constructor() {
-    super();
-    this.minDamage = 4;
-    this.maxDamage = 5;
-    this.accuracy = 0.98;
-    this.name = "Dagger";
-  }
-  canOwnerUseIt = () => {
-    return this.owner instanceof Rouge;
-  };
+    constructor() {
+        super(null, 4, 5, 0.98, "Dagger", () => {
+            return this.owner instanceof Rouge;
+        });
+    }
 }
