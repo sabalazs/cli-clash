@@ -1,7 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const abilities_js_1 = require("./abilities.js");
-class Hero {
+import { abilitiesMap } from "./abilities.js";
+export default class Hero {
     constructor(name, hp, abilities = [], defaultAbility, armour, evasion, currentArmour = 0, currentEvasion = 0, currentDamage = 0, weapon = null) {
         this.name = name;
         this.hp = hp;
@@ -16,7 +14,7 @@ class Hero {
         this.useAbility = (abilityName = this.defaultAbility) => {
             const canUseAbility = this.abilities.find((ability) => ability.toString() === abilityName.toString());
             if (canUseAbility) {
-                const ability = abilities_js_1.abilitiesMap[abilityName];
+                const ability = abilitiesMap[abilityName];
                 ability(this);
                 console.log(`${this.name} has used the ability: ${abilityName}`);
             }
@@ -39,4 +37,3 @@ class Hero {
         this.name = name;
     }
 }
-exports.default = Hero;

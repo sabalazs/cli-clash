@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.abilitiesMap = void 0;
 const armour = (hero) => {
     hero.currentArmour += 10;
 };
@@ -24,4 +21,4 @@ const abilitiesMap = {
     dodge: dodge,
     headshot: headshot,
 };
-exports.abilitiesMap = abilitiesMap;
+export { abilitiesMap };

@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Weapon {
+export default class Weapon {
     constructor(owner, minDamage, maxDamage, accuracy, name, canOwnerUseIt) {
         this.owner = owner;
         this.minDamage = minDamage;
@@ -10,4 +8,3 @@ class Weapon {
         this.canOwnerUseIt = canOwnerUseIt;
     }
 }
-exports.default = Weapon;
