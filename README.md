@@ -3,7 +3,7 @@
 Node version: v16.15.0
 
 ## Getting started
-Edit the `index.js` file to change fighters or equipment, then run the fight with
+Edit the `index.ts` file to change fighters or equipment, then run the fight with
 ```
 npm run start
 ```
