@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "tsc && node ./build/index.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
     "url": "https://github.com/sabalazs/cli-clash/issues"
   },
   "homepage": "https://github.com/sabalazs/cli-clash#readme",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^4.8.2"
+  }
 }

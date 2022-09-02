@@ -1,12 +1,11 @@
-export default class Arena {
-  winner;
-  loser;
-  roundCount = 0;
+import Hero from "./Hero";
 
-  constructor(hero1, hero2) {
-    this.hero1 = hero1;
-    this.hero2 = hero2;
-  }
+export default class Arena {
+  winner: Hero | undefined;
+  loser: Hero | undefined;
+  roundCount: number = 0;
+
+  constructor(public hero1: Hero, public hero2: Hero) {}
 
   fight = () => {
     console.log(
@@ -19,7 +18,7 @@ export default class Arena {
       }.\x1b[0m`
     );
     while (!this.winner && this.roundCount < 100) this.fightOneRound();
-    if (this.roundCount >= 100) {
+    if (this.winner === undefined) {
       console.log(
         `The fight is over! \x1b[32mThe jury got bored, it's a draw.`
       );
@@ -55,7 +54,7 @@ export default class Arena {
     }
   };
 
-  strike = (attacker, defender) => {
+  strike = (attacker: Hero, defender: Hero) => {
     if (attacker.hp <= 0) return;
 
     console.log(`${attacker.name} is striking ${defender.name}.`);
@@ -77,7 +76,7 @@ export default class Arena {
     }
   };
 
-  calculateFinalDamage = (attacker, defender) => {
+  calculateFinalDamage = (attacker: Hero, defender: Hero) => {
     let initialDamage = attacker.currentDamage;
     if (attacker.weapon?.canOwnerUseIt()) {
       if (Math.random() < attacker.weapon.accuracy) {

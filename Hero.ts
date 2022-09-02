@@ -1,18 +1,21 @@
 import { abilitiesMap } from "./abilities.js";
+import { Ability } from "./type.js";
+import Weapon from "./Weapon.js";
 
 export default class Hero {
-  name;
-  hp;
-  abilities = [];
-  defaultAbility;
-  armour;
-  evasion;
-  currentArmour = 0;
-  currentEvasion = 0;
-  currentDamage = 0;
-  weapon;
 
-  constructor(name) {
+  constructor(
+    public name: string,
+    public hp: number,
+    public abilities: Ability[] = [],
+    public defaultAbility: Ability,
+    public armour: number,
+    public evasion: number,
+    public currentArmour: number = 0,
+    public currentEvasion: number = 0,
+    public currentDamage: number = 0,
+    public weapon: Weapon | null = null
+  ) {
     if (!name) throw new Error("Missing parameter: name");
     this.name = name;
   }
@@ -33,7 +36,7 @@ export default class Hero {
     }
   };
 
-  equipWeapon = (weapon) => {
+  equipWeapon = (weapon: Weapon) => {
     this.weapon = weapon;
     weapon.owner = this;
     console.log(`${this.name} was equipped with ${weapon.name}`);
