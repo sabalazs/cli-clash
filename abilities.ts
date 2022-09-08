@@ -25,4 +25,12 @@ const abilitiesMap = {
   headshot: headshot,
 };
 
-export { abilitiesMap };
+const abilities = Object.freeze({
+  armour: "armour",
+  heal: "heal",
+  firestorm: "firestorm",
+  dodge: "dodge",
+  headshot: "headshot",
+});
+
+export { abilities, abilitiesMap };
